@@ -10,6 +10,12 @@ pub struct Combinator<T> {
     pub in_buffers: HashMap<u8, Steps<T>>,
 }
 
+impl<T> Default for Combinator<T> {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl<T> Combinator<T> {
     pub fn new() -> Self {
         Combinator {
